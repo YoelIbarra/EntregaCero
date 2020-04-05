@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class OperacionEgreso {
     private boolean abierta;
     private List<Item> items;
+    private boolean generaRemito = false;
 
     public OperacionEgreso(){
         abierta = true;
@@ -30,7 +31,7 @@ public class OperacionEgreso {
         }
         abierta = false;
         if(condicionRemito()){
-            generarRemito();
+            generaRemito = true;
         }
     }
 
@@ -57,7 +58,9 @@ public class OperacionEgreso {
        return items.stream().filter(x -> x.getTipo() == TipoItem.Servicio).collect(Collectors.toList()).isEmpty();
     }
 
-    public void generarRemito(){
-        new Remito(this);
-    }
+    public boolean generarRemito(){
+        return generaRemito;
+        //new Remito(this);
+    } // por ahora lo hago asi para ver si me viene a la funcion nada mas. Cuando tenga mas
+    // cosas sobre los remitos lo genero
 }

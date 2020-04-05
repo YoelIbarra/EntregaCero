@@ -2,11 +2,11 @@ package est.utn.frba.dds.Item;
 
 public class Item {
     private String nombre;
-    private float precio;
+    private double precio;
     TipoItem tipo;
 
     //CONSTRUCTOR
-    public Item(String _nombre, float _precio, TipoItem _tipo){
+    public Item(String _nombre, double _precio, TipoItem _tipo){
         nombre = _nombre;
         precio = _precio;
         tipo = _tipo;
@@ -16,7 +16,7 @@ public class Item {
         return nombre;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
