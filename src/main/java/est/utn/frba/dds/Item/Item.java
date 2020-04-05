@@ -12,7 +12,6 @@ public class Item {
         tipo = _tipo;
     }
 
-    //GETTERS
     public String getNombre() {
         return nombre;
     }
@@ -23,6 +22,10 @@ public class Item {
 
     public TipoItem getTipo() {
         return tipo;
+    }
+
+    public void setPrecio(float _precio){
+        precio = _precio;
     }
 
 
